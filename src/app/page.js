@@ -1,15 +1,24 @@
 'use client'
 
+import Image from 'next/image'
+
 import {
     HeroContainer, Menu,
     Preamble,
-    Cases, Case
+    Cases, Case, CaseMeta
 } from '@/styles/home'
-import Image from 'next/image'
+
+import CustomCursor from '@/components/custom-cursor'
 
 const cases = [
     {
         id: 'loplabbet',
+        img: '/images/loplabbet-thumb.png',
+        heading: 'Running and doing cool stuff',
+        tags: ['E commerce', 'UX/UI']
+    },
+    {
+        id: 'loplabbet-2',
         img: '/images/loplabbet-thumb.png',
         heading: 'Running and doing cool stuff',
         tags: ['E commerce', 'UX/UI']
@@ -19,6 +28,7 @@ const cases = [
 const Home = () => {
     return (
         <>
+            <CustomCursor />
             <HeroContainer>
                 <Menu>
                     <ul>
@@ -47,14 +57,18 @@ const Home = () => {
             </HeroContainer>
             <Cases>
                 {cases.map(({ id, img, heading, tags }) => (
-                    <Case key={id}>
+                    <Case
+                        className="case"
+                        key={id}>
                         <Image src={img} alt={heading} width={800} height={600} />
-                        <h2>{heading}</h2>
-                        <ul className="tags">
-                            {tags.map(tag => (
-                                <li key={tag}>{tag}</li>
-                            ))}
-                        </ul>
+                        <CaseMeta>
+                            <h2>{heading}</h2>
+                            <ul className="tags">
+                                {tags.map(tag => (
+                                    <li key={tag}>{tag}</li>
+                                ))}
+                            </ul>
+                        </CaseMeta>
                     </Case>
                 ))}
             </Cases>

@@ -20,10 +20,13 @@ export const HeroContainer = styled.div`
         color: #3c3c3c;
     }
 
-    padding: 2rem 2.5rem;
+    padding: 2rem 2.5rem 7rem;
 `
 
 export const Menu = styled.nav`
+    position: fixed;
+    inset-inline: 2.5rem;
+
     display: flex;
     justify-content: space-between;
 
@@ -66,6 +69,7 @@ export const Preamble = styled.div`
     p {
         font-size: 1.75rem;
         font-weight: 400;
+        color: #3c3c3c;
 
         &:not(:last-of-type) {
             margin-block-end: 2rem;
@@ -74,24 +78,27 @@ export const Preamble = styled.div`
 `
 
 export const Cases = styled.section`
-    padding: 10rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+
+    padding: 10rem 2.5rem;
 `
 
-export const Case = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+export const Case = styled.a`
+    cursor: none;
+
+    display: flex;
     align-items: center;
     row-gap: 1.5rem;
     column-gap: 4.5rem;
 
     img {
-        grid-row: 1 / 3;
-
+        max-width: 100%;
         height: auto;
     }
 
     h2 {
-        grid-column: 2;
         align-self: end;
         
         font-size: 1.75rem;
@@ -100,7 +107,6 @@ export const Case = styled.div`
     }
 
     .tags {
-        grid-column: 2;
         align-self: start;
 
         display: flex;
@@ -119,4 +125,20 @@ export const Case = styled.div`
             }
         }
     }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    &:hover {
+        img {
+            scale: 1.05;
+        }
+    }
+`
+
+export const CaseMeta = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 `
