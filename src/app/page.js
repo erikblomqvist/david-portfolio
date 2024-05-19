@@ -2,11 +2,7 @@
 
 import Image from 'next/image'
 
-import {
-    HeroContainer, Menu,
-    Preamble,
-    Cases, Case, CaseMeta
-} from '@/styles/home'
+import styles from './page.module.css'
 
 import CustomCursor from '@/components/custom-cursor'
 
@@ -29,49 +25,60 @@ const Home = () => {
     return (
         <>
             <CustomCursor />
-            <HeroContainer>
-                <Menu>
-                    <ul>
-                        <li>
-                            <a href="#">david vickhoff</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="#">about me</a>
-                        </li>
-                        <li>
-                            <a href="#">work</a>
-                        </li>
-                    </ul>
-                </Menu>
+            <nav className={styles.menu}>
+                <ul>
+                    <li>
+                        <a href="#">david vickhoff</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">about me</a>
+                    </li>
+                    <li>
+                        <a href="#">work</a>
+                    </li>
+                </ul>
+            </nav>
+            <div className={styles['hero-container']}>
                 <h1>
                     <span>UX designer</span>
                     <span>with a focus on</span>
                     <span>bla bla bla</span>
                 </h1>
-                <Preamble>
+                <div className={styles.preamble}>
                     <p>I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills. I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills.</p>
                     <p>I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills.</p>
-                </Preamble>
-            </HeroContainer>
-            <Cases>
+                </div>
+            </div>
+            <section className={styles.cases}>
                 {cases.map(({ id, img, heading, tags }) => (
-                    <Case
-                        className="case"
+                    <div
+                        className={[
+                            styles.case,
+                            'case',
+                            id
+                        ].join(' ')}
                         key={id}>
-                        <Image src={img} alt={heading} width={800} height={600} />
-                        <CaseMeta>
+                        <picture>
+                            <Image
+                                src={img}
+                                alt={heading}
+                                width={800}
+                                height={600}
+                            />
+                        </picture>
+                        <div className={styles['case-meta']}>
                             <h2>{heading}</h2>
-                            <ul className="tags">
+                            <ul className={styles.tags}>
                                 {tags.map(tag => (
                                     <li key={tag}>{tag}</li>
                                 ))}
                             </ul>
-                        </CaseMeta>
-                    </Case>
+                        </div>
+                    </div>
                 ))}
-            </Cases>
+            </section>
         </>
     )
 }

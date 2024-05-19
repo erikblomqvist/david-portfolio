@@ -1,3 +1,7 @@
+:root {
+    --vickhoff-color-loplabbet-background: #ede9ee;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,6 +12,8 @@ html,
 body {
     max-width: 100vw;
     overflow-x: hidden;
+
+    font-weight: 300;
 }
 
 a {
@@ -18,4 +24,8 @@ a {
 body:has(.case:hover) > .custom-cursor {
     opacity: 1;
     scale: 1;
+}
+
+.loplabbet picture {
+    background-color: var(--vickhoff-color-loplabbet-background);
 }
