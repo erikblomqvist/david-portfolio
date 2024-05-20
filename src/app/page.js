@@ -38,6 +38,13 @@ const Home = () => {
                     <p>I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills. I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills.</p>
                     <p>I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills.</p>
                 </div>
+                <div className={styles['scroll-down']}>
+                    <Image
+                        src="/hero-arrow.svg"
+                        width={20}
+                        height={44}
+                        alt="Scroll down" />
+                </div>
             </div>
             <section className={styles.cases}>
                 {cases.map(({ id, img, heading, url, tags }) => (
