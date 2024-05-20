@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from './page.module.css'
 
@@ -11,12 +12,14 @@ const cases = [
         id: 'loplabbet',
         img: '/images/loplabbet-thumb.png',
         heading: 'Running and doing cool stuff',
+        url: '/case/loplabbet',
         tags: ['E commerce', 'UX/UI']
     },
     {
         id: 'loplabbet-2',
         img: '/images/loplabbet-thumb.png',
         heading: 'Running and doing cool stuff',
+        url: '/case/loplabbet',
         tags: ['E commerce', 'UX/UI']
     }
 ]
@@ -25,21 +28,6 @@ const Home = () => {
     return (
         <>
             <CustomCursor />
-            <nav className={styles.menu}>
-                <ul>
-                    <li>
-                        <a href="#">david vickhoff</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#">about me</a>
-                    </li>
-                    <li>
-                        <a href="#">work</a>
-                    </li>
-                </ul>
-            </nav>
             <div className={styles['hero-container']}>
                 <h1>
                     <span>UX designer</span>
@@ -52,8 +40,9 @@ const Home = () => {
                 </div>
             </div>
             <section className={styles.cases}>
-                {cases.map(({ id, img, heading, tags }) => (
-                    <div
+                {cases.map(({ id, img, heading, url, tags }) => (
+                    <Link
+                        href={url}
                         className={[
                             styles.case,
                             'case',
@@ -76,7 +65,7 @@ const Home = () => {
                                 ))}
                             </ul>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </section>
         </>
