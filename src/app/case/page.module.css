@@ -14,10 +14,11 @@
     grid-column: hero;
     
     display: flex;
+    justify-content: end;
     flex-direction: column;
     gap: 3rem;
     
-    margin-block: 8rem 4rem;
+    min-height: 90dvh;
 
     & h1 {
         --size: 4.5rem;
