@@ -29,3 +29,52 @@ body:has(.case:hover) > .custom-cursor {
 .loplabbet picture {
     background-color: var(--vickhoff-color-loplabbet-background);
 }
+
+section.case-layout {
+    display: grid;
+    grid-template-columns:
+        [fullbleed-start] 116px
+        [hero-start] 112px
+        [text-start] minmax(1rem, 1fr)
+        [text-end] 112px
+        [hero-end] 116px [fullbleed-end];
+
+    padding-inline: 3.5rem;
+
+    & > * {
+        grid-template-columns: subgrid;
+    }
+
+    & > picture {
+        grid-column: fullbleed;
+
+        margin-block: 4rem;
+
+        & > img {
+            border-radius: 1rem;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    & > .case-text-content {
+        grid-column: text;
+
+        margin-block: 4rem;
+
+        color: #3c3c3c;
+
+        & h3 {
+            margin-block-end: 1rem;
+            
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        & p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 2.25;
+        }
+    }
+}

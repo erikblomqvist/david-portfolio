@@ -1,12 +1,20 @@
-export const metadata = {
-    title: "David Vickhoff - Portfolio",
-    description: "David Vickhoff's portfolio",
-}
+'use client'
 
-export default function CaseLayout({ children }) {
+import { usePathname } from 'next/navigation'
+
+const CaseLayout = ({ children }) => {
+    const pathname = usePathname()
+    
+    const caseName = pathname.split('/')[2]
+    
     return (
-        <section>
+        <section
+            className="case-layout"
+            style={{ 'backgroundColor': `var(--vickhoff-color-${caseName}-background)` }}
+        >
             {children}
         </section>
     )
 }
+
+export default CaseLayout

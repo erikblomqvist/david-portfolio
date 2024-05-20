@@ -1,0 +1,129 @@
+@keyframes h1In {
+    from {
+        transform: skew(6deg);
+        line-height: 3.3;
+    }
+
+    to {
+        transform: skew(0);
+        line-height: 1.1;
+    }
+}
+
+.case-hero {
+    grid-column: hero;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    margin-block: 8rem 4rem;
+
+    & h1 {
+        --size: 4.5rem;
+        --line-height: 1.1;
+        
+        display: flex;
+        flex-direction: column;
+        
+        font-size: var(--size);
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: var(--line-height);
+        color: #3c3c3c;
+
+        & span {
+            height: calc(var(--size) * 1.2);
+            overflow: hidden;
+            
+            animation: h1In 600ms cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+            transform: skew(6deg);
+
+            line-height: 3.3;
+
+            &:nth-child(2) {
+                animation-delay: 200ms;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 400ms;
+            }
+        }
+    }
+}
+
+.case-hero-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+@keyframes metaIn {
+    from {
+        translate: 0 1rem;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+.case-meta {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: 1rem;
+
+    max-width: 40rem;
+
+    opacity: 0;
+    translate: 0 1rem;
+    animation: metaIn 600ms cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+    animation-delay: 800ms;
+    
+    & dt {
+        text-transform: lowercase;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.25em;
+        color: #a2a2a2;
+    }
+
+    & dd {
+        grid-row: 2;
+    }
+}
+
+@keyframes preambleIn {
+    from {
+        translate: 0 1rem;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+.preamble {
+    max-width: 70ch;
+
+    animation: preambleIn 800ms cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+    animation-delay: 1200ms;
+
+    translate: 0 1rem;
+    opacity: 0;
+
+    & p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: #3c3c3c;
+
+        &:not(:last-of-type) {
+            margin-block-end: 2rem;
+        }
+    }
+}
