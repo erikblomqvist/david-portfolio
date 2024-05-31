@@ -1,5 +1,17 @@
 :root {
     --vickhoff-color-loplabbet-background: #ede9ee;
+    --vickhoff-color-loplabbet-background-fade-r: 114;
+    --vickhoff-color-loplabbet-background-fade-g: 59;
+    --vickhoff-color-loplabbet-background-fade-b: 128;
+    --vickhoff-color-loplabbet-background-fade-a: 0.1;
+    --vickhoff-color-loplabbet-text: #824794;
+
+    --vickhoff-color-absence-background: #f5efeb;
+    --vickhoff-color-absence-background-fade-r: 247;
+    --vickhoff-color-absence-background-fade-g: 202;
+    --vickhoff-color-absence-background-fade-b: 177;
+    --vickhoff-color-absence-background-fade-a: 0.3;
+    --vickhoff-color-absence-text: #f8a476;
 }
 
 * {
@@ -26,8 +38,23 @@ body:has(.case:hover) > .custom-cursor {
     scale: 1;
 }
 
-.loplabbet picture {
-    background-color: var(--vickhoff-color-loplabbet-background);
+.case {
+    &.w\:3\/4 {
+        width: 75%;
+    }
+
+    &.w\:1\/2 {
+        width: 50%;
+    }
+    &.loplabbet {
+        --background: var(--vickhoff-color-loplabbet-background);
+        --text: var(--vickhoff-color-loplabbet-text);
+    }
+
+    &.absence {
+        --background: var(--vickhoff-color-absence-background);
+        --text: var(--vickhoff-color-absence-text);
+    }
 }
 
 @keyframes case-img-in {
@@ -44,22 +71,22 @@ body:has(.case:hover) > .custom-cursor {
 
 section.case-layout {
     display: grid;
-    grid-template-columns:
-        [fullbleed-start] minmax(0, 1fr)
-        [hero-start] minmax(0, 112px)
-        [text-start] 70ch
-        [text-end] minmax(0, 112px)
-        [hero-end] minmax(0, 1fr) [fullbleed-end];
+    grid-template-columns: 3.5rem repeat(12, 1fr) 3.5rem;
     justify-content: center;
 
-    padding-inline: 3.5rem;
+    background-color: var(--background);
+    background-image: linear-gradient(
+        253.91deg,
+        rgba(var(--background-fade-r), var(--background-fade-g), var(--background-fade-b), var(--background-fade-a)) 0%,
+        rgba(var(--background-fade-r), var(--background-fade-g), var(--background-fade-b), 0) 23.35%
+    );
 
     & > * {
         grid-template-columns: subgrid;
     }
 
     & > picture {
-        grid-column: fullbleed;
+        grid-column: 1 / -1;
 
         margin-block: 4rem;
 
@@ -71,30 +98,39 @@ section.case-layout {
         }
 
         & > img {
-            border-radius: 1rem;
             width: 100%;
             height: auto;
         }
     }
 
     & > .case-text-content {
-        grid-column: text;
+        grid-column: 2 / span 6;
 
-        margin-block: 4rem;
+        margin-block: 5rem;
 
         color: #3c3c3c;
 
         & h3 {
             margin-block-end: 1rem;
             
-            font-size: 1.125rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 400;
         }
 
         & p {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             font-weight: 300;
-            line-height: 2.25;
+            line-height: 1.75;
         }
+    }
+
+    & > h2 {
+        grid-column: 2 / span 12;
+
+        margin-block: 10rem;
+
+        font-size: 5.5rem;
+        font-weight: 400;
+        text-align: end;
     }
 }

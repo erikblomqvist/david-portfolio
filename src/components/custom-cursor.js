@@ -12,7 +12,8 @@ const CustomCursor = () => {
                 styles.cursor,
                 'custom-cursor'
             ].join(' ')}
-            style={{ left: x, top: y }} />
+            style={{ translate: `${x}px ${y}px` }}
+        />
     )
 }
 

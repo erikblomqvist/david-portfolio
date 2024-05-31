@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 
 import styles from './page.module.css'
 
@@ -11,16 +11,18 @@ const cases = [
     {
         id: 'loplabbet',
         img: '/images/loplabbet-thumb.png',
-        heading: 'Running and doing cool stuff',
+        heading: 'A better <strong>shopping experience</strong> for runners.',
         url: '/case/loplabbet',
-        tags: ['E commerce', 'UX/UI']
+        tags: ['E commerce', 'UX/UI'],
+        className: 'w:3/4'
     },
     {
-        id: 'loplabbet-2',
-        img: '/images/loplabbet-thumb.png',
-        heading: 'Running and doing cool stuff',
-        url: '/case/loplabbet',
-        tags: ['E commerce', 'UX/UI']
+        id: 'absence',
+        img: '/images/absence-thumbnail.jpg',
+        heading: 'The <strong>presence</strong> of absence.',
+        url: '/case/absence',
+        tags: ['Product design'],
+        className: 'w:1/2'
     }
 ]
 
@@ -47,10 +49,11 @@ const Home = () => {
                 </div>
             </div>
             <section className={styles.cases}>
-                {cases.map(({ id, img, heading, url, tags }) => (
+                {cases.map(({ id, img, heading, url, tags, className }) => (
                     <Link
                         href={url}
                         className={[
+                            className,
                             styles.case,
                             'case',
                             id
@@ -65,7 +68,7 @@ const Home = () => {
                             />
                         </picture>
                         <div className={styles['case-meta']}>
-                            <h2>{heading}</h2>
+                            <h2 dangerouslySetInnerHTML={{ __html: heading }} />
                             <ul className={styles.tags}>
                                 {tags.map(tag => (
                                     <li key={tag}>{tag}</li>

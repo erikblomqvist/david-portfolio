@@ -1,3 +1,4 @@
+import { ViewTransitions } from 'next-view-transitions'
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
 
@@ -15,11 +16,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
-            <body className={dmSans.className}>
-                <Navigation />
-                {children}
-            </body>
-        </html>
+        <ViewTransitions>
+            <html lang="en">
+                <body className={dmSans.className}>
+                    <Navigation />
+                    {children}
+                </body>
+            </html>
+        </ViewTransitions>
     )
 }

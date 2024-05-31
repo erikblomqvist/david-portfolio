@@ -10,7 +10,14 @@ const CaseLayout = ({ children }) => {
     return (
         <section
             className="case-layout"
-            style={{ 'backgroundColor': `var(--vickhoff-color-${caseName}-background)` }}
+            style={{
+                '--background': `var(--vickhoff-color-${caseName}-background)`,
+                '--background-fade-r': `var(--vickhoff-color-${caseName}-background-fade-r)`,
+                '--background-fade-g': `var(--vickhoff-color-${caseName}-background-fade-g)`,
+                '--background-fade-b': `var(--vickhoff-color-${caseName}-background-fade-b)`,
+                '--background-fade-a': `var(--vickhoff-color-${caseName}-background-fade-a)`,
+                '--text': `var(--vickhoff-color-${caseName}-text)`
+            }}
         >
             {children}
         </section>
