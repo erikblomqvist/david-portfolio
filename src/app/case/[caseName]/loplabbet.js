@@ -21,12 +21,12 @@ const Loplabbet = () => (
                 </div>
             </div>
         </div>
-        <picture>
+        <picture className="full">
             <Image
-                src="/images/loplabbet-thumb.png"
+                src="/images/cases/loplabbet/hero.jpg"
                 alt="Running and doing cool stuff"
-                width={1600}
-                height={1200}
+                width={2880}
+                height={1462}
             />
         </picture>
         <div className="case-text-content">
@@ -37,6 +37,49 @@ const Loplabbet = () => (
         <div className="case-text-content">
             <p>A flexible product grid designed to manage a variety of layouts and combinations.</p>
         </div>
+        <div className="case-media-content">
+            <video autoPlay loop muted playsInline preload="none">
+                <source src="/images/cases/loplabbet/grid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div className="case-text-content">
+            <p>We transformed their existing shoe tests into a digital format, allowing users to easily compare all available shoes.</p>
+        </div>
+        <picture>
+            <Image
+                src="/images/cases/loplabbet/highscore.jpg"
+                alt="Running and doing cool stuff"
+                width={2656}
+                height={1838}
+            />
+        </picture>
+        <div className="case-images">
+            <picture>
+                <Image
+                    src="/images/cases/loplabbet/compare.jpg"
+                    alt="Running and doing cool stuff"
+                    width={1292}
+                    height={1600}
+                />
+            </picture>
+            <picture>
+                <Image
+                    src="/images/cases/loplabbet/environment.jpg"
+                    alt="Running and doing cool stuff"
+                    width={1288}
+                    height={1200}
+                />
+            </picture>
+        </div>
+        <picture>
+            <Image
+                src="/images/cases/loplabbet/full-page.jpg"
+                alt="Running and doing cool stuff"
+                width={1600}
+                height={4060}
+            />
+        </picture>
     </>
 )
 

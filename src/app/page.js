@@ -10,7 +10,7 @@ import CustomCursor from '@/components/custom-cursor'
 const cases = [
     {
         id: 'loplabbet',
-        img: '/images/loplabbet-thumb.png',
+        img: '/images/cases/loplabbet/thumbnail.jpg',
         heading: 'A better <strong>shopping experience</strong> for runners.',
         url: '/case/loplabbet',
         tags: ['E commerce', 'UX/UI'],

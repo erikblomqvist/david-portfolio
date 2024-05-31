@@ -12,6 +12,7 @@ const CaseLayout = ({ children }) => {
             className="case-layout"
             style={{
                 '--background': `var(--vickhoff-color-${caseName}-background)`,
+                '--background-alt': `var(--vickhoff-color-${caseName}-background-alt)`,
                 '--background-fade-r': `var(--vickhoff-color-${caseName}-background-fade-r)`,
                 '--background-fade-g': `var(--vickhoff-color-${caseName}-background-fade-g)`,
                 '--background-fade-b': `var(--vickhoff-color-${caseName}-background-fade-b)`,
