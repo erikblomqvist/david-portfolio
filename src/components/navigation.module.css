@@ -1,5 +1,6 @@
 .menu {
     position: fixed;
+    z-index: 1000;
     inset-block-start: 2.5rem;
     inset-inline: 2.5rem;
 

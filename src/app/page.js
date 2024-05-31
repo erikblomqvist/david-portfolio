@@ -30,9 +30,9 @@ const Home = () => {
             <CustomCursor />
             <div className={styles['hero-container']}>
                 <h1>
-                    <span>UX designer</span>
-                    <span>with a focus on</span>
-                    <span>bla bla bla</span>
+                    <span>UX designer with a</span>
+                    <span><i>focus on </i><b>seamless</b></span>
+                    <span>user experiences.</span>
                 </h1>
                 <div className={styles.preamble}>
                     <p>I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills. I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills.</p>
