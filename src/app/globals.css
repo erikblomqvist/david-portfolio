@@ -86,9 +86,18 @@ section.case-layout {
     }
 
     & > picture {
-        grid-column: 1 / -1;
+        grid-column: 2 / span 12;
+        
+        
+        &.full {
+            grid-column: 1 / -1;
 
-        margin-block: 4rem;
+            margin-block-end: 80px;
+        }
+
+        &:not(.full) {
+            margin-block-end: 160px;
+        }
 
         &:first-of-type {
             translate: 0 10dvh;
@@ -106,7 +115,7 @@ section.case-layout {
     & > .case-text-content {
         grid-column: 2 / span 6;
 
-        margin-block: 5rem;
+        margin-block-end: 40px;
 
         color: #3c3c3c;
 
@@ -132,5 +141,24 @@ section.case-layout {
         font-size: 5.5rem;
         font-weight: 400;
         text-align: end;
+        letter-spacing: -0.05em;
+    }
+
+    & .case-images {
+        display: grid;
+        grid-column: 2 / span 12;
+        grid-template-columns: subgrid;
+        gap: 2.5rem;
+
+        margin-block-end: 80px;
+
+        & > picture {
+            grid-column: span 6;
+
+            & > img {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }

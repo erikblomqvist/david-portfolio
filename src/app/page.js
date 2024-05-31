@@ -18,7 +18,7 @@ const cases = [
     },
     {
         id: 'absence',
-        img: '/images/absence-thumbnail.jpg',
+        img: '/images/cases/absence/thumbnail.jpg',
         heading: 'The <strong>presence</strong> of absence.',
         url: '/case/absence',
         tags: ['Product design'],

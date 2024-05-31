@@ -18,6 +18,7 @@
     flex-direction: column;
     gap: 3rem;
     
+    margin-block-end: 80px;
     min-height: 90dvh;
     padding-block-start: 200px;
 
