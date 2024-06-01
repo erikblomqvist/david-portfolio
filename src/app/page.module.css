@@ -235,7 +235,7 @@
 
         background-color: var(--background);
 
-        transition: scale 250ms;
+        transition: scale 550ms;
     }
 
     &:hover {
