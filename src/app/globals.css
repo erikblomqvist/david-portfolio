@@ -13,6 +13,13 @@
     --vickhoff-color-absence-background-fade-b: 177;
     --vickhoff-color-absence-background-fade-a: 0.3;
     --vickhoff-color-absence-text: #f8a476;
+
+    --vickhoff-color-designsystem-background: #F4F7FF;
+    --vickhoff-color-designsystem-background-fade-r: 247;
+    --vickhoff-color-designsystem-background-fade-g: 202;
+    --vickhoff-color-designsystem-background-fade-b: 177;
+    --vickhoff-color-designsystem-background-fade-a: 0.3;
+    --vickhoff-color-designsystem-text: #4473D5;
 }
 
 * {
@@ -55,6 +62,11 @@ body:has(.case:hover) > .custom-cursor {
     &.absence {
         --background: var(--vickhoff-color-absence-background);
         --text: var(--vickhoff-color-absence-text);
+    }
+
+    &.designsystem {
+        --background: var(--vickhoff-color-designsystem-background);
+        --text: var(--vickhoff-color-designsystem-text);
     }
 }
 

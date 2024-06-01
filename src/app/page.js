@@ -23,6 +23,14 @@ const cases = [
         url: '/case/absence',
         tags: ['Product design'],
         className: 'w:1/2'
+    },
+    {
+        id: 'designsystem',
+        img: '/images/cases/designsystem/thumbnail.jpg',
+        heading: 'Designing for <strong>conistency</strong>.',
+        url: '/case/designsystem',
+        tags: ['Product design'],
+        className: 'w:1/2'
     }
 ]
 
