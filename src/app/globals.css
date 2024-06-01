@@ -82,6 +82,41 @@ body:has(.case:hover) > .custom-cursor {
     }
 }
 
+.page {
+    & > :where(.background, .page-title, svg) {
+        pointer-events: none;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        
+        width: 100vw;
+        height: calc(100vh + 600px);
+    }
+
+    & > .background {
+        background-color: var(--text);
+        transition: opacity 500ms linear;
+    }
+
+    & > svg {
+        fill: var(--text);
+    }
+
+    & > .page-title {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        top: 40%;
+
+        transform: translateX(-50%);
+
+        color: white;
+        font-size: 46px;
+        text-align: center;
+    }
+}
+
 section.case-layout {
     display: grid;
     grid-template-columns: 3.5rem repeat(12, 1fr) 3.5rem;

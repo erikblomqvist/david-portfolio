@@ -145,7 +145,7 @@
 }
 
 .preamble {
-    align-self: end;
+    align-self: end; /* autoprefixer: off */
 
     margin-inline-end: 6rem;
     max-width: 70ch;
@@ -218,13 +218,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: start; /* autoprefixer: off */
     row-gap: 2.5rem;
 
     padding: 6rem;
 
     &:nth-child(even) {
-        align-self: end;
+        align-self: end; /* autoprefixer: off */
     }
 
     &::before {
@@ -259,7 +259,7 @@
     }
 
     & h2 {
-        align-self: end;
+        align-self: end; /* autoprefixer: off */
         
         font-size: 2.25rem;
         font-weight: 300;
@@ -274,7 +274,7 @@
 }
 
 .tags {
-    align-self: start;
+    align-self: start;  /* autoprefixer: off */
 
     display: flex;
     gap: .25rem;

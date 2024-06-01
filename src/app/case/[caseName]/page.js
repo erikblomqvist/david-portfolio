@@ -5,7 +5,11 @@ const CasePage = ({ params }) => {
 
     const CaseComponent = dynamic(() => import(`./${caseName}`))
 
-    return <CaseComponent />
+    return (
+        <section className="case-layout">
+            <CaseComponent />
+        </section>
+    )
 }
 
 export default CasePage
