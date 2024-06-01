@@ -15,7 +15,8 @@ const animate = variants => ({
 
 const caseTitles = {
     loplabbet: 'Löplabbet',
-    absence: 'Absence'
+    absence: 'Absence',
+    'design-system': 'Design system'
 }
 
 const Curve = ({ children }) => {

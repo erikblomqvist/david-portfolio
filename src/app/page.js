@@ -25,10 +25,10 @@ const cases = [
         className: 'w:1/2'
     },
     {
-        id: 'designsystem',
+        id: 'design-system',
         img: '/images/cases/designsystem/thumbnail.jpg',
-        heading: 'Designing for <strong>conistency</strong>.',
-        url: '/case/designsystem',
+        heading: 'Designing for <strong>consistency</strong>.',
+        url: '/case/design-system',
         tags: ['Product design'],
         className: 'w:1/2'
     }
