@@ -8,7 +8,7 @@ const Absence = () => (
             <div className={styles['case-hero-content']}>
                 <h1>
                     <span>The <strong>presence</strong> of</span>
-                    <span><strong>absence</strong>.</span>
+                    <span>absence.</span>
                 </h1>
                 <ul className={styles['case-meta']}>
                     <li>Product: Huma</li>
