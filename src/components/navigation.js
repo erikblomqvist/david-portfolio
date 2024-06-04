@@ -10,10 +10,10 @@ const Navigation = () => (
         </ul>
         <ul>
             <li>
-                <Link href="#">about me</Link>
+                <Link href="#">About me</Link>
             </li>
             <li>
-                <Link href="#">work</Link>
+                <Link href="#">My work</Link>
             </li>
         </ul>
     </nav>
