@@ -42,12 +42,13 @@
     padding: 2rem 2.5rem 7rem;
     background-color: #f3f3f3;
 
+    @media (width < 1000px) {
+        padding-block-end: 4rem;
+    }
+
     & h1 {
         --size: 5.5rem;
         --line-height: 1.1;
-        
-        display: flex;
-        flex-direction: column;
 
         margin-block-start: 8rem;
         margin-inline-start: 5.25rem;
@@ -57,6 +58,17 @@
         letter-spacing: -0.02em;
         line-height: var(--line-height);
         color: #3c3c3c;
+
+        @media (width >= 1000px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (width < 1000px) {
+            --size: 3rem;
+            
+            margin-inline-start: 0;
+        }
 
         & span {
             overflow: hidden;
@@ -97,6 +109,8 @@
                 inset-inline-start: 0.5rem;
                 display: inline-block;
 
+                margin-inline-end: 0.5ex;
+
                 animation: h1-b-in 1000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
                 animation-delay: 900ms;
                 
@@ -112,14 +126,21 @@
 
                     background-image: url('/images/me.png');
                     background-size: 100%;
-                    background-position-x: 0;
-                    background-position-y: 40%;
-                    clip-path: xywh(110px calc(50% - 3rem) 65% 6rem round 5rem 5rem);
+                    background-position: 0 40%;
+                    clip-path: xywh(7rem calc(50% - 3rem) 6.75ch 6rem round 5rem 5rem);
 
                     animation: h1-b-before-in 1000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
                     animation-delay: 750ms;
                     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
                     opacity: 0;
+                }
+
+                @media (width < 1000px) {
+                    &::before {
+                        background-size: 80%;
+                        background-position: 40% 60%;
+                        clip-path: xywh(7rem calc(50% - 1.5rem) 6.75ch 3rem round 5rem 5rem);
+                    }
                 }
 
                 &:hover::before {
@@ -156,12 +177,21 @@
     translate: 0 2rem;
     opacity: 0;
 
+    @media (width < 1000px) {
+        margin-inline-end: 0;
+    }
+
     & p {
         font-size: 1.75rem;
         color: #3c3c3c;
 
         &:not(:last-of-type) {
             margin-block-end: 2rem;
+        }
+
+        @media (width < 1000px) {
+            font-size: 1.5rem;
+            line-height: 1.4;
         }
     }
 }
@@ -198,6 +228,10 @@
     animation: fadeIn 500ms forwards;
     animation-delay: 2000ms;
     opacity: 0;
+
+    @media (width < 1000px) {
+        display: none;
+    }
     
     & > img {
         animation: bounce 2s infinite;
@@ -212,6 +246,12 @@
     margin-inline: auto;
     width: min(100%, 1380px);
     padding: 10rem 2.5rem;
+
+    @media (width < 1000px) {
+        gap: 4rem;
+        
+        padding: 4rem 1.5rem;
+    }
 }
 
 .case {
@@ -222,6 +262,10 @@
     row-gap: 2.5rem;
 
     padding: 6rem;
+
+    @media (width < 1000px) {
+        padding: 2rem;
+    }
 
     &:nth-child(even) {
         align-self: end; /* autoprefixer: off */
@@ -265,6 +309,10 @@
         font-weight: 300;
         letter-spacing: -0.02em;
         color: #3c3c3c;
+
+        @media (width < 1000px) {
+            font-size: 1.875rem;
+        }
 
         & strong {
             color: var(--text);

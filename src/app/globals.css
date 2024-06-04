@@ -48,11 +48,15 @@ body:has(.case:hover) > .custom-cursor {
 
 .case {
     &.w\:3\/4 {
-        width: 75%;
+        @media (width >= 1000px) {
+            width: 75%;
+        }
     }
 
     &.w\:1\/2 {
-        width: 50%;
+        @media (width >= 1000px) {
+            width: 50%;
+        }
     }
     &.loplabbet {
         --background: var(--vickhoff-color-loplabbet-background);
@@ -118,8 +122,10 @@ body:has(.case:hover) > .custom-cursor {
 }
 
 section.case-layout {
+    --gutter: 3.5rem;
+    
     display: grid;
-    grid-template-columns: 3.5rem repeat(12, 1fr) 3.5rem;
+    grid-template-columns: var(--gutter) repeat(12, 1fr) var(--gutter);
     justify-content: center;
 
     background-color: var(--background);
@@ -129,13 +135,16 @@ section.case-layout {
         rgba(var(--background-fade-r), var(--background-fade-g), var(--background-fade-b), 0) 23.35%
     );
 
+    @media (width < 1000px) {
+        --gutter: 2rem;
+    }
+
     & > * {
         grid-template-columns: subgrid;
     }
 
     & > picture {
         grid-column: 2 / span 12;
-        
         
         &.full {
             grid-column: 1 / -1;
@@ -145,6 +154,10 @@ section.case-layout {
 
         &:not(.full) {
             margin-block-end: 160px;
+
+            @media (width < 1000px) {
+                margin-block-end: 40px;
+            }
         }
 
         &:first-of-type {
@@ -167,6 +180,12 @@ section.case-layout {
 
         color: #3c3c3c;
 
+        @media (width < 1000px) {
+            grid-column: 2 / span 12;
+
+            margin-block-end: 20px;
+        }
+
         & h3 {
             margin-block-end: 1rem;
             
@@ -188,6 +207,10 @@ section.case-layout {
         padding: 8% 16%;
         background-color: var(--background-alt);
 
+        @media (width < 1000px) {
+            margin-block-end: 40px;
+        }
+
         & > video {
             width: 100%;
             height: auto;
@@ -205,6 +228,12 @@ section.case-layout {
         font-weight: 400;
         text-align: end;
         letter-spacing: -0.05em;
+
+        @media (width < 1000px) {
+            margin-block: 3rem;
+            
+            font-size: 3rem;
+        }
     }
 
     & .case-images {

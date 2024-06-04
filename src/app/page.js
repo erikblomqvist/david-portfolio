@@ -39,8 +39,8 @@ const Home = () => (
         <CustomCursor />
         <div className={styles['hero-container']}>
             <h1>
-                <span>UX designer with a</span>
-                <span><i>focus on </i><b>seamless</b></span>
+                <span>UX designer with a </span>
+                <span><i>focus on </i><b>seamless</b> </span>
                 <span>user experiences.</span>
             </h1>
             <div className={styles.preamble}>
