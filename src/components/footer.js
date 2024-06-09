@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import styles from './footer.module.css'
 import Link from 'next/link'
 
-const Footer = props => {
+const Footer = () => {
     const pathname = usePathname()
     const slugName = pathname.split('/').at(-1)
     const isCase = !!slugName.length
@@ -13,9 +13,10 @@ const Footer = props => {
     const NextCase = () => {
         if(!isCase) return null
 
-        const currentIndex = cases.findIndex(c => c.id === slugName)
-        const nextIndex = currentIndex === cases.length - 1 ? 0 : currentIndex + 1
-        const nextCase = cases[nextIndex]
+        const filteredCases = cases.filter(({ url }) => !!url)
+        const currentIndex = filteredCases.findIndex(c => c.id === slugName)
+        const nextIndex = currentIndex === filteredCases.length - 1 ? 0 : currentIndex + 1
+        const nextCase = filteredCases[nextIndex]
 
         return (
             <div className={nextCase.id}>
