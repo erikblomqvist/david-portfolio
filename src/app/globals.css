@@ -74,7 +74,6 @@ body:has(.case.coming-soon:hover) > .custom-cursor {
 
         & img {
             scale: 1.03;
-            clip-path: inset(1.5% 1.5% 1.5% 1.5%);
         }
     }
 
