@@ -10,9 +10,6 @@ const Navigation = () => (
         </ul>
         <ul>
             <li>
-                <Link href="#">About me</Link>
-            </li>
-            <li>
                 <Link href="/#cases">My work</Link>
             </li>
         </ul>
