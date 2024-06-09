@@ -5,7 +5,7 @@ const Navigation = () => (
     <nav className={styles.menu}>
         <ul>
             <li>
-                <Link href="/">david vickhoff</Link>
+                <Link className={styles.clean} href="/">david vickhoff</Link>
             </li>
         </ul>
         <ul>
