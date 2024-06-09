@@ -7,7 +7,6 @@ const dmSans = DM_Sans({
 })
 
 import Navigation from '@/components/navigation'
-import Curve from '@/components/curve'
 
 export const metadata = {
     title: "David Vickhoff - Portfolio",
@@ -18,9 +17,7 @@ const RootLayout = ({ children }) => (
     <html lang="en">
         <body className={dmSans.className}>
             <Navigation />
-            <Curve>
-                {children}
-            </Curve>
+            {children}
         </body>
     </html>
 )
