@@ -1,0 +1,41 @@
+.footer {
+    padding: 10rem 3.5rem;
+    background-color: #131313;
+
+    color: #fff;
+
+    @media (width < 1000px) {
+        padding: 4rem 1.5rem;
+    }
+
+    & h3 {
+        font-size: 1.125rem;
+        font-weight: 400;
+
+        @media (width < 1000px) {
+            font-size: 1rem;
+        }
+    }
+
+    & h4 {
+        margin-block-end: 3.5rem;
+        
+        font-size: 3.125rem;
+        font-weight: 400;
+
+        @media (width < 1000px) {
+            margin-block-end: 2rem;
+            
+            font-size: 2.5rem;
+        }
+    }
+
+    & h4 strong {
+        font-weight: 400;
+        color: var(--text);
+    }
+
+    & p {
+        font-size: 1.25rem;
+    }
+}

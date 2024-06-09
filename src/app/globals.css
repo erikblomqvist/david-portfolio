@@ -20,6 +20,8 @@
     --vickhoff-color-design-system-background-fade-b: 177;
     --vickhoff-color-design-system-background-fade-a: 0.3;
     --vickhoff-color-design-system-text: #4473d5;
+
+    --vickhoff-curve-animation-duration: 600ms;
 }
 
 * {
@@ -58,6 +60,7 @@ body:has(.case:hover) > .custom-cursor {
             width: 50%;
         }
     }
+
     &.loplabbet {
         --background: var(--vickhoff-color-loplabbet-background);
         --text: var(--vickhoff-color-loplabbet-text);
@@ -69,6 +72,23 @@ body:has(.case:hover) > .custom-cursor {
     }
 
     &.design-system {
+        --background: var(--vickhoff-color-design-system-background);
+        --text: var(--vickhoff-color-design-system-text);
+    }
+}
+
+footer {
+    & .loplabbet {
+        --background: var(--vickhoff-color-loplabbet-background);
+        --text: var(--vickhoff-color-loplabbet-text);
+    }
+
+    & .absence {
+        --background: var(--vickhoff-color-absence-background);
+        --text: var(--vickhoff-color-absence-text);
+    }
+
+    & .design-system {
         --background: var(--vickhoff-color-design-system-background);
         --text: var(--vickhoff-color-design-system-text);
     }

@@ -7,7 +7,7 @@ import styles from './page.module.css'
 
 import CustomCursor from '@/components/custom-cursor'
 
-const cases = [
+export const cases = [
     {
         id: 'loplabbet',
         img: '/images/cases/loplabbet/thumbnail.jpg',
@@ -55,7 +55,10 @@ const Home = () => (
                     alt="Scroll down" />
             </div>
         </div>
-        <section className={styles.cases}>
+        <section
+            id="cases"
+            className={styles.cases}
+        >
             {cases.map(({ id, img, heading, url, tags, className }) => (
                 <Link
                     key={id}

@@ -7,6 +7,7 @@ const dmSans = DM_Sans({
 })
 
 import Navigation from '@/components/navigation'
+import Footer from '@/components/footer'
 
 export const metadata = {
     title: "David Vickhoff - Portfolio",
@@ -18,6 +19,7 @@ const RootLayout = ({ children }) => (
         <body className={dmSans.className}>
             <Navigation />
             {children}
+            <Footer />
         </body>
     </html>
 )
