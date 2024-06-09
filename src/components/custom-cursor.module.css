@@ -9,6 +9,7 @@
     width: 64px;
     height: 64px;
     background-image: url('/images/pointer.svg');
+    background-size: cover;
 
     translate: 0 0;
     scale: 0.2;

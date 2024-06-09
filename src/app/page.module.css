@@ -282,15 +282,24 @@
         transition: scale 550ms;
     }
 
-    &:hover {
-        &::before {
-            scale: 1.03;
-        }
+    & picture {
+        position: relative;
+    }
 
-        & img {
-            scale: 1.03;
-            clip-path: inset(1.5% 1.5% 1.5% 1.5%);
-        }
+    & .comingsoon {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        z-index: 2;
+        inset: 0;
+
+        background-color: #1a1a1ae5;
+
+        letter-spacing: 0.3em;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
     }
 
     & img {

@@ -31,6 +31,14 @@ export const cases = [
         url: '/case/design-system',
         tags: ['Product design'],
         className: 'w:1/2'
+    },
+    {
+        id: 'mio',
+        img: '/images/cases/mio/thumbnail.jpg',
+        heading: 'Mio my Mio.',
+        url: null,
+        tags: ['E-commerce, UX/UI'],
+        className: 'w:3/4'
     }
 ]
 
@@ -59,34 +67,42 @@ const Home = () => (
             id="cases"
             className={styles.cases}
         >
-            {cases.map(({ id, img, heading, url, tags, className }) => (
-                <Link
-                    key={id}
-                    href={url}
-                    className={[
-                        className,
-                        styles.case,
-                        'case',
-                        id
-                    ].join(' ')}>
-                    <picture>
-                        <Image
-                            src={img}
-                            alt={heading}
-                            width={800}
-                            height={600}
-                        />
-                    </picture>
-                    <div className={styles['case-meta']}>
-                        <h2 dangerouslySetInnerHTML={{ __html: heading }} />
-                        <ul className={styles.tags}>
-                            {tags.map(tag => (
-                                <li key={`${id}:${tag}`}>{tag}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </Link>
-            ))}
+            {cases.map(({ id, img, heading, url, tags, className }) => {
+                const [Wrapper, wrapperProps] = url ?
+                    [Link, { href: url }]
+                    : ['div', {}]
+
+                return (
+                    <Wrapper
+                        key={id}
+                        {...wrapperProps}
+                        className={[
+                            className,
+                            styles.case,
+                            'case',
+                            !url && 'coming-soon',
+                            id
+                        ].join(' ')}>
+                        <picture>
+                            {!url && <div className={styles.comingsoon}>Coming soon</div>}
+                            <Image
+                                src={img}
+                                alt={heading}
+                                width={800}
+                                height={600}
+                            />
+                        </picture>
+                        <div className={styles['case-meta']}>
+                            <h2 dangerouslySetInnerHTML={{ __html: heading }} />
+                            <ul className={styles.tags}>
+                                {tags.map(tag => (
+                                    <li key={`${id}:${tag}`}>{tag}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </Wrapper>
+                )
+            })}
         </section>
     </>
 )
