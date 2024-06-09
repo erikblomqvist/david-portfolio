@@ -33,42 +33,22 @@
     & h1 {
         --size: 8rem;
         --line-height: 0.9;
-        
-        display: flex;
-        flex-direction: column;
-        
-        font-size: var(--size);
-        font-weight: 400;
-        letter-spacing: -0.02em;
-        line-height: var(--line-height);
-        color: #3c3c3c;
 
         @media (width < 1000px) {
             --size: 3rem;
         }
 
-        & span {
-            height: calc(var(--size) * 1.125);
-            overflow: hidden;
-            
-            animation: h1In 600ms cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
-            animation-delay: var(--vickhoff-curve-animation-duration);
-            transform: skew(6deg);
+        & > div {
+            font-size: var(--size);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: var(--line-height);
+            color: #3c3c3c;
+        }
 
-            line-height: 3.3;
-
-            &:nth-child(2) {
-                animation-delay: calc(var(--vickhoff-curve-animation-duration) + 200ms);
-            }
-
-            &:nth-child(3) {
-                animation-delay: calc(var(--vickhoff-curve-animation-duration) + 400ms);
-            }
-
-            & strong {
-                font-weight: unset;
-                color: var(--text);
-            }
+        & strong {
+            font-weight: unset;
+            color: var(--text);
         }
     }
 }

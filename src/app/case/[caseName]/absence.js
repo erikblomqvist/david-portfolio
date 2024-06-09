@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import H1Lines from '@/components/h1-lines'
 
 import styles from '../page.module.css'
 
@@ -6,10 +9,7 @@ const Absence = () => (
     <>
         <div className={styles['case-hero']}>
             <div className={styles['case-hero-content']}>
-                <h1>
-                    <span>The <strong>presence</strong> of</span>
-                    <span>absence.</span>
-                </h1>
+                <H1Lines text="The [presence] of absence." />
                 <ul className={styles['case-meta']}>
                     <li>Product: Huma</li>
                     <li>Role: UX/UI/Research</li>

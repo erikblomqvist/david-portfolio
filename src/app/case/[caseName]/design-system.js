@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import H1Lines from '@/components/h1-lines'
 
 import styles from '../page.module.css'
 
@@ -6,10 +9,7 @@ const DesignSystem = () => (
     <>
         <div className={styles['case-hero']}>
             <div className={styles['case-hero-content']}>
-                <h1>
-                    <span>Designing for</span>
-                    <span><strong>consistency</strong>.</span>
-                </h1>
+                <H1Lines text="Designing for [consistency]." />
                 <ul className={styles['case-meta']}>
                     <li>Product: Huma</li>
                     <li>Role: UX/UI/Research</li>
