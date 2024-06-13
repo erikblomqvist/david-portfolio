@@ -28,7 +28,7 @@ export const cases = [
         id: 'design-system',
         img: '/images/cases/designsystem/thumbnail.jpg',
         heading: 'Designing for <strong>consistency</strong>.',
-        url: '/case/design-system',
+        url: null,
         tags: ['Product design'],
         className: 'w:1/2'
     },
@@ -38,7 +38,7 @@ export const cases = [
         heading: 'Mio my Mio.',
         url: null,
         tags: ['E-commerce, UX/UI'],
-        className: 'w:3/4'
+        className: 'w:3/4',
     }
 ]
 

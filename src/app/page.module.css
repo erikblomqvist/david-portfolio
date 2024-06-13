@@ -296,7 +296,7 @@
         z-index: 2;
         inset: 0;
 
-        background-color: #1a1a1ae5;
+        background-color: rgba(26,26,26,0.8);
 
         letter-spacing: 0.3em;
         font-size: 0.875rem;
