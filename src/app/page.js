@@ -53,7 +53,7 @@ const Home = () => (
             </h1>
             <div className={styles.preamble}>
                 <p>I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills. I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills.</p>
-                <p>I mainly focus on user interfaces and experiences, like websites, apps and platforms. For more than nine years I’ve helped to improve products with my creative thinking and skills.</p>
+                <p>And this is a longer text so it will look good and be cool and look like a proper designer has made this shit.</p>
             </div>
             <div className={styles['scroll-down']}>
                 <Image
