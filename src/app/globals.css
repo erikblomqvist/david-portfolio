@@ -21,7 +21,13 @@
     --vickhoff-color-design-system-background-fade-a: 0.3;
     --vickhoff-color-design-system-text: #4473d5;
 
-    --vickhoff-color-mio-background: #dbdbdb;
+    --vickhoff-color-mio-background: #F4F4F4;
+    --vickhoff-color-mio-background-fade-r: 247;
+    --vickhoff-color-mio-background-fade-b: 177;
+    --vickhoff-color-mio-background-fade-g: 202;
+    --vickhoff-color-mio-background-fade-a: 0.3;
+    --vickhoff-color-mio-text: #4797A2;
+
 
     --vickhoff-curve-animation-duration: 600ms;
 }
