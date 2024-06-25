@@ -35,7 +35,7 @@ export const cases = [
     {
         id: 'mio',
         img: '/images/cases/mio/thumbnail.jpg',
-        heading: 'Mio my Mio.',
+        heading: 'Online furnitures at Mio möbler',
         url: null,
         tags: ['E-commerce, UX/UI'],
         className: 'w:3/4',
