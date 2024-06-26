@@ -97,7 +97,7 @@ body:has(.case.coming-soon:hover) > .custom-cursor {
 
     &.mio {
         --background: var(--vickhoff-color-mio-background);
-        --text: var(--vickhoff-mio-system-text);
+        --text: var(--vickhoff-color-mio-text);
     }
 }
 
