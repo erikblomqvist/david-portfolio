@@ -74,33 +74,37 @@ const Home = () => (
 
                 return (
                     <Wrapper
-                        key={id}
-                        {...wrapperProps}
-                        className={[
-                            className,
-                            styles.case,
-                            'case',
-                            !url && 'coming-soon',
-                            id
-                        ].join(' ')}>
-                        <picture>
-                            {!url && <div className={styles.comingsoon}>Coming soon</div>}
-                            <Image
-                                src={img}
-                                alt={heading}
-                                width={800}
-                                height={600}
-                            />
-                        </picture>
-                        <div className={styles['case-meta']}>
-                            <h2 dangerouslySetInnerHTML={{ __html: heading }} />
-                            <ul className={styles.tags}>
-                                {tags.map(tag => (
-                                    <li key={`${id}:${tag}`}>{tag}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </Wrapper>
+                    key={id}
+                    {...wrapperProps}
+                    className={[
+                        className,
+                        styles.case,
+                        'case',
+                        !url && 'coming-soon',
+                        id
+                    ].join(' ')}>
+                    <picture>
+                        <Image
+                            src={img}
+                            alt={heading}
+                            width={800}
+                            height={600}
+                        />
+                        {!url && (
+                            <div className={styles.comingsoonContainer}>
+                                <div className={styles.comingsoon}>Coming soon</div>
+                            </div>
+                        )}
+                    </picture>
+                    <div className={styles['case-meta']}>
+                        <h2 dangerouslySetInnerHTML={{ __html: heading }} />
+                        <ul className={styles.tags}>
+                            {tags.map(tag => (
+                                <li key={`${id}:${tag}`}>{tag}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </Wrapper>
                 )
             })}
         </section>
