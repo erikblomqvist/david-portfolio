@@ -28,7 +28,6 @@
     --vickhoff-color-mio-background-fade-a: 0.3;
     --vickhoff-color-mio-text: #4797A2;
 
-
     --vickhoff-curve-animation-duration: 600ms;
 }
 
@@ -60,19 +59,17 @@ body:has(.case.coming-soon:hover) > .custom-cursor {
     background-image: url('/images/coming-soon.svg');
 }
 
+@media (width >= 1000px) {
+    .case.w\:3\/4 {
+        width: 75%;
+    }
+
+    .case.w\:1\/2 {
+        width: 50%;
+    }
+}
+
 .case {
-    &.w\:3\/4 {
-        @media (width >= 1000px) {
-            width: 75%;
-        }
-    }
-
-    &.w\:1\/2 {
-        @media (width >= 1000px) {
-            width: 50%;
-        }
-    }
-
     &:not(.coming-soon):hover {
         &::before {
             scale: 1.03;
