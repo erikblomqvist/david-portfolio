@@ -42,10 +42,6 @@
     padding: 2rem 2.5rem 7rem;
     background-color: #f3f3f3;
 
-    @media (width < 1000px) {
-        padding-block-end: 4rem;
-    }
-
     & h1 {
         --size: 5.5rem;
         --line-height: 1.1;
@@ -58,17 +54,6 @@
         letter-spacing: -0.02em;
         line-height: var(--line-height);
         color: #3c3c3c;
-
-        @media (width >= 1000px) {
-            display: flex;
-            flex-direction: column;
-        }
-
-        @media (width < 1000px) {
-            --size: 3rem;
-            
-            margin-inline-start: 0;
-        }
 
         & span {
             overflow: hidden;
@@ -135,14 +120,6 @@
                     opacity: 0;
                 }
 
-                @media (width < 1000px) {
-                    &::before {
-                        background-size: 80%;
-                        background-position: 40% 60%;
-                        clip-path: xywh(7rem calc(50% - 1.5rem) 6.75ch 3rem round 5rem 5rem);
-                    }
-                }
-
                 &:hover::before {
                     clip-path: xywh(0px 0px 100% 100% round 13rem 13rem);
                     background-size: 110%;
@@ -177,21 +154,12 @@
     translate: 0 2rem;
     opacity: 0;
 
-    @media (width < 1000px) {
-        margin-inline-end: 0;
-    }
-
     & p {
         font-size: 1.75rem;
         color: #3c3c3c;
 
         &:not(:last-of-type) {
             margin-block-end: 2rem;
-        }
-
-        @media (width < 1000px) {
-            font-size: 1.5rem;
-            line-height: 1.4;
         }
     }
 }
@@ -228,10 +196,6 @@
     animation: fadeIn 500ms forwards;
     animation-delay: 2000ms;
     opacity: 0;
-
-    @media (width < 1000px) {
-        display: none;
-    }
     
     & > img {
         animation: bounce 2s infinite;
@@ -246,12 +210,6 @@
     margin-inline: auto;
     width: min(100%, 1380px);
     padding: 10rem 2.5rem;
-
-    @media (width < 1000px) {
-        gap: 4rem;
-        
-        padding: 4rem 1.5rem;
-    }
 }
 
 .case {
@@ -262,10 +220,6 @@
     row-gap: 2.5rem;
 
     padding: 6rem;
-
-    @media (width < 1000px) {
-        padding: 2rem;
-    }
 
     &:nth-child(even) {
         align-self: end; /* autoprefixer: off */
@@ -328,10 +282,6 @@
         letter-spacing: -0.02em;
         color: #3c3c3c;
 
-        @media (width < 1000px) {
-            font-size: 1.875rem;
-        }
-
         & strong {
             color: var(--text);
             font-weight: unset;
@@ -365,8 +315,64 @@
     gap: 1.5rem;
 
     max-width: 50%;
+}
 
-    @media (width < 1200px) {
+
+
+@media (width < 1200px) {
+    .case-meta {
         max-width: 80%;
+    }
+}
+
+@media (width < 1000px) {
+    .cases {
+        gap: 4rem;
+        
+        padding: 4rem 1.5rem;
+    }
+
+    .case {
+        padding: 2rem;
+
+        & h2 {
+            font-size: 1.875rem;
+        }
+    }
+
+    .hero-container {
+        padding-block-end: 4rem;
+
+        & h1 {
+            --size: 3rem;
+            
+            margin-inline-start: 0;
+
+            & span b::before {
+                background-size: 80%;
+                background-position: 40% 60%;
+                clip-path: xywh(7rem calc(50% - 1.5rem) 6.75ch 3rem round 5rem 5rem);
+            }
+        }
+    }
+
+    .preamble {
+        margin-inline-end: 0;
+
+        & p {
+            font-size: 1.5rem;
+            line-height: 1.4;
+        }
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
+
+@media (width >= 1000px) {
+    .hero-container h1 {
+        display: flex;
+        flex-direction: column;
     }
 }
