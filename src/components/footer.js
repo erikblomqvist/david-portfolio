@@ -31,7 +31,7 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <NextCase />
-            <p>Seen enough? Contact me at <Link href="mailto:dvickhoff@gmail.com">dvickhoff@gmail.com</Link> and let’s get started :)</p>
+            <p>Seen enough? Contact me at <Link href="mailto:dvickhoff@gmail.com">dvickhoff@gmail.com</Link> or find me at my <a href="http://www.linkedin.com/in/davidvickhoff">Linkedin</a> and let’s get started :)</p>
         </footer>
     )
 }
