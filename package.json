@@ -17,7 +17,9 @@
     },
     "devDependencies": {
         "eslint": "^8",
-        "eslint-config-next": "14.2.3"
+        "eslint-config-next": "14.2.3",
+        "postcss": "^8.4.38",
+        "postcss-nesting": "^12.1.5"
     },
     "browserslist": [
         ">0.3%",
