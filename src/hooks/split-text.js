@@ -21,7 +21,7 @@ export const useSplitText = (calculateSplitText) => {
         setTimeout(() => {
             calculateSplitText(splitRef.current)
         }, 500)
-    }, [calculateSplitText, splitRef.current])
+    }, [calculateSplitText, splitRef])
 
     return splitRef
 }
