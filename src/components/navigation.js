@@ -36,19 +36,19 @@ const Navigation = () => {
         };
     }, [pathname])
 
+    const isRootActive = (pathname === '/' && !isBeyondCases)
+
     return (
         <nav className={styles.menu}>
             <ul>
                 <li>
                     <Link
-                        className={(pathname === '/' && !isBeyondCases) ? styles.active : ''}
+                        className={isRootActive ? styles.active : ''}
                         href="/#top">david vickhoff</Link>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <Link
-                        className={(isCaseRoute || isBeyondCases) ? styles.active : ''}
+                        className={!isRootActive ? styles.active : ''}
                         href="/#cases">My work</Link>
                 </li>
             </ul>

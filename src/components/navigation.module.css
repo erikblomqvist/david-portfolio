@@ -37,6 +37,8 @@
         
         color: #1e1e1e;
 
+        transition: all .1s ease-in-out;
+
         &:hover::after {
             content: '';
             position: absolute;
@@ -45,6 +47,8 @@
 
             height: 3px;
             background-color: currentColor;
+
+            transition: inherit;
         }
     }
 }
