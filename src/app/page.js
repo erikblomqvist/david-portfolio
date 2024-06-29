@@ -54,6 +54,7 @@ const Home = () => (
             <div className={styles.preamble}>
                 <p>My name is David, a designer originally from Gothenburg. I’ve been creating digital services and products for more than 10 years.</p>
                 <p>I have a passion for interface design and experiences and my goal is to always create great stuff that solves problems.</p>
+                <p>Have a look at my work and maybe we'll talk soon :)</p>
             </div>
             <div className={styles['scroll-down']}>
                 <Image
