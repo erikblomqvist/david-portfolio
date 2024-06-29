@@ -225,6 +225,10 @@
         align-self: end;
     }
 
+    &:nth-child(odd) {
+        align-self: start;
+    }
+
     &::before {
         content: '';
         position: absolute;
