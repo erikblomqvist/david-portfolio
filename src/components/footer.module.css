@@ -42,4 +42,8 @@
     & p {
         font-size: 1.25rem;
     }
+
+    & a {
+        text-decoration: underline;
+    }
 }

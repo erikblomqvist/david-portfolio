@@ -37,13 +37,32 @@
         
         color: #1e1e1e;
 
-        &:where(:hover, :focus) {
-            text-decoration: underline;
+        transition: all .1s ease-in-out;
+
+        &:hover::after {
+            content: '';
+            position: absolute;
+            inset-block-end: -.5rem;
+            inset-inline: 0;
+
+            height: 3px;
+            background-color: currentColor;
+
+            transition: inherit;
         }
     }
 }
 
-.clean {
-    font-size: 1.125rem;
-    font-weight: 700;
+.active {
+    font-weight: 500;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset-block-end: -.5rem;
+        inset-inline: 0;
+
+        height: 3px;
+        background-color: currentColor;
+    }
 }
