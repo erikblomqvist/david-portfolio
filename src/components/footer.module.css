@@ -4,6 +4,10 @@
 
     color: #fff;
 
+    > div a {
+        text-decoration: none;
+    }
+
     @media (width < 1000px) {
         padding: 4rem 1.5rem;
     }
